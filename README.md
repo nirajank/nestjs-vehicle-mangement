@@ -73,6 +73,7 @@ a)  Vechicle create POST Api Sample-  http://localhost:3000/vehicle
     Response: vehicle object response will get if all validation passes.
 
 b)  Vechicle all records GET Api Sample-  http://localhost:3000/vehicle
+
     HTTP REQUEST TYPE: GET
 
     Testing Methodology: Just hit the url.
@@ -80,6 +81,7 @@ b)  Vechicle all records GET Api Sample-  http://localhost:3000/vehicle
 
 
 c)  To update single vechicle by _id PUT Api Sample-  http://localhost:3000/vehicle/{_id}
+
     HTTP REQUEST TYPE: PUT
 
     Testing Methodology: In body of postman in raw section put following json body by selecting JSON in select input present in last and replace {_id} with original identifier of vehicle
@@ -141,6 +143,7 @@ g)  To add maintenance task to vechicle by _id PUT Api Sample -  http://localhos
     Response: vehicle object response will get if all validation passes.
 
 h)  Vechicle to get single record GET Api Sample-  http://localhost:3000/vehicle/{_id}
+    
     HTTP REQUEST TYPE: GET
 
     Testing Methodology: Just hit the url.
