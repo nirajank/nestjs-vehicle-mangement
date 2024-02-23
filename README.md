@@ -4,8 +4,8 @@
 
 ## Installation
 1) First install mongodb in your computer.
-2) Create  database in mongodb with suitable name, in our case vechicle_management.
-3) Now copy .env.example file of root directory of application changes your database url and port for serving application.
+2) Create  database in mongodb with suitable name, in our case vehicle_management or any suitable name.
+3) Now copy/rename .env.example file present in root directory of application and change your database url and port for serving application.
 4) Now install nodejs v18.17.1 and npm version 9.6.7 in computer.
 5) Now go to application directory and run following command
 ```bash
@@ -55,7 +55,7 @@ b)  Login POST Api Sample-  http://localhost:3000/user/login
     Response: access_token response will get if password and email is correct.
 
 II) Vehicle Api
-## Note to access below api from "a" to "h" you need to set "Authorization" key in header to "Bearer {access_token}" . {access_token} with be get through login api.
+## Note to access below api from "a" to "h" you need to set "Authorization" key in Header to "Bearer {access_token}" . {access_token} will be get through login api.
 
 a)  Vechicle create POST Api Sample-  http://localhost:3000/vehicle
 
@@ -97,16 +97,9 @@ d)  To delete single vechicle by _id DELETE Api Sample-  http://localhost:3000/v
 
     HTTP REQUEST TYPE: DELETE
 
-    Testing Methodology: In body of postman in raw section put following json body by selecting JSON in select input present in last and replace {_id} with original identifier of vehicle
-                        {
-                            "make": "make",
-                            "model":"model",
-                            "year":2010,
-                            "registrationNumber":"registrationNumber",
-                            "status":"active",
-                            "location":"location"
-                        }
-    Response: vehicle object response will get if all validation passes.
+    Testing Methodology: Just Hit the URL.
+
+    Response: vehicle object response will get which was deleted.
 
 e)  To update status vechicle by _id PUT Api Sample-  http://localhost:3000/vehicle/{_id}/status
 
@@ -124,7 +117,7 @@ f)  To assign driver to vechicle by _id PUT Api Sample -  http://localhost:3000/
 
     HTTP REQUEST TYPE: PUT
     
-    NOTE:: Since, it is only for demo purpose, I have not made driver crud so driverID can be any string for now. So relationship can be also maintained if required
+## NOTE:: Since, it is only for demo purpose, I have not made driver crud so driverID can be any string for now. So relationship can be also maintained if required
 
     Testing Methodology: In body of postman in raw section put following json body by selecting JSON in select input present in last and replace {_id} with original identifier of vehicle
                         {
@@ -138,7 +131,7 @@ g)  To add maintenance task to vechicle by _id PUT Api Sample -  http://localhos
 
     HTTP REQUEST TYPE: PUT
     
-    NOTE:: Since, it is only for demo purpose, I have not made maintenace crud since they are similar so taskId can be any string for now. So relationship can be also maintained if required.
+## NOTE:: Since, it is only for demo purpose, I have not made maintenance crud since they are similar so taskId can be any string for now. So relationship can be also maintained if required.
 
     Testing Methodology: In body of postman in raw section put following json body by selecting JSON in select input present in last and replace {_id} with original identifier of vehicle
                         {
@@ -152,5 +145,8 @@ h)  Vechicle to get single record GET Api Sample-  http://localhost:3000/vehicle
 
     Testing Methodology: Just hit the url.
     Response: vehicle object response.
+
+
+
 
 
